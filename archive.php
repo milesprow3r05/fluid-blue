@@ -4,22 +4,22 @@
 
 	<?php if (have_posts()) : ?>
 
-	<?php /* If this is a category archive */ if (is_category()) { ?>
+	<?php if (is_category()) { ?>
 		<p>Рубрика &laquo;<?php echo single_cat_title(); ?>&raquo;</p>
 
- 		<?php /* If this is a tag archive */ } elseif ( function_exists ('is_tag') && (is_tag()) ) { ?>
+ 		<?php } elseif ( function_exists ('is_tag') && (is_tag()) ) { ?>
 		<p>Тег &laquo;<?php echo single_tag_title(); ?>&raquo;</p>
 
-	 <?php /* If this is a daily archive */ } elseif (is_day()) { ?>
+	 <?php } elseif (is_day()) { ?>
 		<p>Архив за <?php the_time('d M Y'); ?></p>
 
-	 <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
+	 <?php } elseif (is_month()) { ?>
 		<p>Архив за <?php the_time('F Y'); ?></p>
 
-		<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
+		<?php } elseif (is_year()) { ?>
 		<p>Архив за <?php the_time('Y'); ?></p>
 
-	  <?php /* If this is an author archive */ } elseif (is_author()) { ?>
+	  <?php } elseif (is_author()) { ?>
 		<p>Архив автора</p>
 
 		<?php } ?>
@@ -33,7 +33,7 @@
 				
 			<div class="post" id="post-<?php the_ID(); ?>">
 				<h2 class="posttitle"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-				<div class="postmetadata"><?php the_time(get_option('date_format').', '.get_option('time_format')) ?> <!-- <?php _e('Автор:') ?> <?php the_author() ?> --></div>
+				<div class="postmetadata"><?php the_time(get_option('date_format').', '.get_option('time_format')) ?> <?php _e('Автор:') ?> <?php the_author() ?> </div>
 				<div class="postentry">
 					<?php the_content("<small>".__('Читать полностью'). " &#8216;" . the_title('', '', false) . "&#8217; &raquo;</small>"); ?>
 				</div>
