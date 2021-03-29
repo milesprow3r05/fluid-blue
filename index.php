@@ -8,7 +8,7 @@
 				
 			<div class="post" id="post-<?php the_ID(); ?>">
 				<h2 class="posttitle"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
-				<div class="postmetadata"><?php the_time(get_option('date_format').', '.get_option('time_format')) ?> <!-- <?php _e('Автор:') ?> <?php the_author() ?> --></div>
+				<div class="postmetadata"><?php the_time(get_option('date_format').', '.get_option('time_format')) ?> <?php _e('Автор:') ?> <?php the_author() ?> </div>
 				<div class="postentry">
 					<?php the_content(__('Читать полностью'). " &#8216;" . the_title('', '', false) . "&#8217; &raquo;"); ?>
 				</div>
