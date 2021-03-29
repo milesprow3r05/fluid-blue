@@ -24,7 +24,6 @@ class Get_link2 {
          $host = $links_class->host;
          $path = $links_class->path;
          $_socket_timeout = $links_class->_socket_timeout;
-         //$_user_agent = $links_class->_user_agent;
 
         @ini_set('allow_url_fopen',          1);
         @ini_set('default_socket_timeout',   $_socket_timeout);
