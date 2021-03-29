@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: Links
-*/
-?>
-
 <?php get_header(); ?>
 
 <div id="content">
@@ -23,8 +17,6 @@ Template Name: Links
 		&show_description=1
 		&between= — 
 	'); 
-	// See http://codex.wordpress.org/Template_Tags/wp_list_bookmarks
-
 ?>
 
 </div>
