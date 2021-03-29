@@ -21,12 +21,9 @@
 		<h1><a href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?>: <?php bloginfo('description') ?>"><?php bloginfo('name') ?></a></h1>
 		<p><?php bloginfo('description') ?></p>
 	</div> 
-	<!-- Search box (If you prefer having search form as a sidebar widget, remove this block) -->
 	<div class="search">
-		<?php  include (TEMPLATEPATH . "/searchform.php"); ?>
-	</div> 
-	<!-- Search ends here-->
-		
+	<?php  include (TEMPLATEPATH . "/searchform.php"); ?>
+	</div> 	
 </div>
 
 <div id="hmenu">
